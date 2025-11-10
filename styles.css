@@ -83,3 +83,88 @@ caption {
   font-weight: bold;
   margin-bottom: 10px;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #007bff; /* blue highlight */
+    outline: none;
+}
+
+
+#contactForm input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#contactForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 599px) {
+    main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    main {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
